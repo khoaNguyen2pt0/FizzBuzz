@@ -55,42 +55,44 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">FizzBuzz's Code</h1>
-                <p class="lead">Here are the code that makes it all work.</p>
-                <div class="row">
-                    <div class="col-9">
-                        <pre>
-                            <code class="language-js">
-                                function FizzBuzz(value1, value2) {
-                                let returnValue = "";
-                                for (let i = 1; i <= 100; i++) {
-                                if (i % value1 == 0 && i % value2 == 0) {
-                                returnValue += "FIZZBUZZOOKAH ";
-                                }
-                                else if (i % value1 == 0) {
-                                returnValue += "fizz ";
-                                }
-                                else if (i % value2 == 0) {
-                                returnValue += "buzz ";
-                                }
-                                else {
-                                returnValue += `${i} `;
-                                }
-                                }
-                                return returnValue;
-                                }
+                <h1 class="mt-5">Taco Cat</h1>
+                <p class="lead">Here is the code that makes it all work!</p>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-9">
+                            <pre>
+                                <code class="language-js">
+                                    function FizzBuzz(value1, value2) {
+                                    let returnValue = "";
+                                    for (let i = 1; i <= 100; i++) {
+                                    if (i % value1 == 0 && i % value2 == 0) {
+                                    returnValue += "FIZZBUZZOOKAH ";
+                                    }
+                                    else if (i % value1 == 0) {
+                                    returnValue += "fizz ";
+                                    }
+                                    else if (i % value2 == 0) {
+                                    returnValue += "buzz ";
+                                    }
+                                    else {
+                                    returnValue += `${i} `;
+                                    }
+                                    }
+                                    return returnValue;
+                                    }
 
-                                function buzzIt() {
-                                let output = "";
-                                let val1 = document.getElementById("input1").value;
-                                let val2 = document.getElementById("input2").value;
-                                output = FizzBuzz(val1, val2);
-                                document.getElementById("output1").innerHTML = output;
+                                    function buzzIt() {
+                                    let output = "";
+                                    let val1 = document.getElementById("input1").value;
+                                    let val2 = document.getElementById("input2").value;
+                                    output = FizzBuzz(val1, val2);
+                                    document.getElementById("output1").innerHTML = output;
 
-                                }
+                                    }
 
-                            </code>
+                                </code>
 </pre>
+                        </div>
                     </div>
                 </div>
             </div>
