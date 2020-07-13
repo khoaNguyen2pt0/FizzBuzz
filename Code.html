@@ -61,31 +61,34 @@
                     <div class="row">
                         <div class="col-9">
                             <pre>
-                            <code class="language-js">
-$("#palIn").click(function () {
-let inputWord = $("#pal").val()
-$("#step1").text(`Your text was ${inputWord}`);
-if (inputWord.length < 2) { alert("Please use two or more characters") } else {
-let word = inputWord.toLowerCase().replace(/\s|\'|\"/g, '');
-$("#step2").text(`After clean up that becomes ${word}`);
-let reversedInput = inputWord.split('').reverse().join('');
-$("#step3").text(`Your text reversed is ${reversedInput}`);
-let revword = reversedInput.toLowerCase().replace(/\s|\'|\"/g, '');
-$("#step4").text(`After clean up that becomes ${revword}`);
-let message = `Your input was: ${inputWord}. Reversed is ${reversedInput}.`;
-let result = ""
-if (word == revword) {
-result = `That means ${inputWord} is a palindrome!`;
-} else {
-result = `That means ${inputWord} is not a plaindrome!`;
-};
-$("#palOut").text(message + " " + result);
-}
-});
-$("#palbtnClear").click(function () {
-$("#pal").val("");
-$("#palOut").text("");
-});
+                                <code class="language-js">
+                                    function FizzBuzz(value1, value2) {
+                                    let returnValue = "";
+                                    for (let i = 1; i <= 100; i++) {
+                                    if (i % value1 == 0 && i % value2 == 0) {
+                                    returnValue += "FIZZBUZZOOKAH ";
+                                    }
+                                    else if (i % value1 == 0) {
+                                    returnValue += "fizz ";
+                                    }
+                                    else if (i % value2 == 0) {
+                                    returnValue += "buzz ";
+                                    }
+                                    else {
+                                    returnValue += `${i} `;
+                                    }
+                                    }
+                                    return returnValue;
+                                    }
+
+                                    function buzzIt() {
+                                    let output = "";
+                                    let val1 = document.getElementById("input1").value;
+                                    let val2 = document.getElementById("input2").value;
+                                    output = FizzBuzz(val1, val2);
+                                    document.getElementById("output1").innerHTML = output;
+
+                                    }
 
                                 </code>
 </pre>
@@ -100,7 +103,7 @@ $("#palOut").text("");
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+    <script src="Scripts/prism.js"></script>
 </body>
 
 </html>
