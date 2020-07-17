@@ -84,7 +84,11 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5">FizzBuzz</h1>
-                <p class="lead">Description of the challenge</p>
+                <p>
+                Pick any 2 random numbers <strong> in the range of 0 - 100</strong>.
+                The program then will print all those numbers; but the numbers that are divisible by the first number will be replaced with <strong> fizz </strong>, and the numbers that are divisible by the second number will be replaced with <strong> buzz </strong>.
+                Finally, if the numbers are divible by both numbers, they will be replaced with <strong> FIZZBUZZ </strong>.     
+                </p>
             </div>
         </div>
         <br />
@@ -93,9 +97,9 @@
 
         <div class="row">
             <div class="col-1"></div>
-            <div class="col-4"><input id="inputFizz" class="form-control soafClass" id="In4" placeholder="Fizz Number" onblur="this.placeholder='Fizz Number'" onfocus="this.placeholder=''" /></div>
+            <div class="col-4"><input id="inputFizz" class="form-control soafClass"  placeholder="1st Number" onblur="this.placeholder='1st Number'" onfocus="this.placeholder=''" /></div>
             <div class="col-2"></div>
-            <div class="col-4"><input id="inputBuzz" class="form-control soafClass" id="In5" placeholder="Buzz Number" onblur="this.placeholder='Buzz Number'" onfocus="this.placeholder=''" /></div>
+            <div class="col-4"><input id="inputBuzz" class="form-control soafClass"  placeholder="2nd Number" onblur="this.placeholder='2nd Number'" onfocus="this.placeholder=''" /></div>
             <div class="col-1"></div>
         </div>
         <br />
@@ -177,7 +181,7 @@
                 let returnValue = ``;
                 for (let i = 1; i <= 100; i++) {
                     if (i % value1 == 0 && i % value2 == 0) {
-                        returnValue += `--FIZZBUZZ--`;
+                        returnValue += `FIZZBUZZ `;
                     }
                     else if (i % value1 == 0) {
                         returnValue += "fizz ";
