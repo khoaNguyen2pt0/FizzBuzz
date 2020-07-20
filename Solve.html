@@ -97,9 +97,9 @@
 
         <div class="row">
             <div class="col-1"></div>
-            <div class="col-4"><input id="inputFizz" class="form-control soafClass"  placeholder="1st Number" onblur="this.placeholder='1st Number'" onfocus="this.placeholder=''" /></div>
+            <div class="col-4"><input type="text" onkeyup=numberOnly(this) id="inputFizz" class="form-control soafClass"  placeholder="1st Number" onblur="this.placeholder='1st Number'" onfocus="this.placeholder=''" /></div>
             <div class="col-2"></div>
-            <div class="col-4"><input id="inputBuzz" class="form-control soafClass"  placeholder="2nd Number" onblur="this.placeholder='2nd Number'" onfocus="this.placeholder=''" /></div>
+            <div class="col-4"><input type="text" onkeyup=numberOnly(this) id="inputBuzz" class="form-control soafClass"  placeholder="2nd Number" onblur="this.placeholder='2nd Number'" onfocus="this.placeholder=''" /></div>
             <div class="col-1"></div>
         </div>
         <br />
@@ -133,7 +133,7 @@
             </div>
         </div>
     </div>
-    </div>
+   
 
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -205,6 +205,19 @@
             $("#inputBuzz").val(``);
             $("#output1").text(``);
         })
+
+        //PREVENT USER FROM TYPING IN NON-NUMBERS
+        function numberOnly(e) {
+            var validChars = /[0-9]/;
+            var strIn = e.value;
+            var strOut = '';
+            for (var i = 0; i < strIn.length; i++) {
+                strOut += (validChars.test(strIn.charAt(i))) ? strIn.charAt(i) : ''; // if strIn input doesn't include characters in validChars -> strIn char at i = '' (delete) 
+            } // charAt() is a method that returns the character from the specified index. 
+            // Characters in a string are indexed from left to right.
+            //The index of the first character is 0, and the index of the last character in a string, called stringName, is stringName.
+            e.value = strOut;
+        }
     </script>
 
 </body>
