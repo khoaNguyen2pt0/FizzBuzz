@@ -69,7 +69,7 @@
   <ItemGroup>
     <Content Include="Code.html" />
     <Content Include="CSS\prism.css" />
-    <Content Include="fizzbuzz.jpg" />
+    <Content Include="fizzbuzz.jpeg" />
     <Content Include="Index.html" />
     <Content Include="kiwi_favicon.png" />
     <Content Include="Scripts\prism.js" />
